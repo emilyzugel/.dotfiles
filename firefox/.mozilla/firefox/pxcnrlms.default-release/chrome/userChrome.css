@@ -1,7 +1,0 @@
-/* Hide tab favicons */
-.tab-icon-image {
-    display: none !important;
-}
-
-/* Hide URL Bar miking it transparent when not focused (toolkit.legacyUserProfileCustomizations.stylesheets)*/ 
-
