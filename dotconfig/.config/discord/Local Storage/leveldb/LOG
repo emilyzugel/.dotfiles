@@ -1,0 +1,9 @@
+2025/03/25-21:20:01.190 ecf1 Reusing MANIFEST /home/zg/.config/discord/Local Storage/leveldb/MANIFEST-000001
+2025/03/25-21:20:01.205 ecf1 Recovering log #3
+2025/03/25-21:20:01.205 ecf1 Reusing old log /home/zg/.config/discord/Local Storage/leveldb/000003.log 
+2025/03/25-21:23:40.390 ecdd Level-0 table #5: started
+2025/03/25-21:23:40.410 ecdd Level-0 table #5: 996253 bytes OK
+2025/03/25-21:23:40.416 ecdd Delete type=0 #3
+2025/03/25-21:25:06.711 ecdd Level-0 table #7: started
+2025/03/25-21:25:06.742 ecdd Level-0 table #7: 2511985 bytes OK
+2025/03/25-21:25:06.748 ecdd Delete type=0 #4
