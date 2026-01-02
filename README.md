@@ -2,5 +2,5 @@
 
 Installation scripts in build process...
 
-![](hyprland_screenshot.jpg)
+![](hyprland_screenshot.png)
 
