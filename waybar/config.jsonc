@@ -1,0 +1,153 @@
+{
+  "layer": "top",
+  "position": "top",
+  "autohide": true,
+  "autohide-blocked": false,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  
+  /* - Modules Order - */
+  "modules-left": ["custom/archicon","hyprland/workspaces", "cpu","memory","disk","temperature"],
+  "modules-center": ["clock"],
+  "modules-right": ["mpris","custom/yay","pulseaudio","custom/crypto","network","battery","custom/logout"],
+
+  /* - MODULES - */ 
+"custom/crypto": {
+    "exec": "~/.config/waybar-crypto/btc_clean.py",
+    "interval": 300,
+    "return-type": "text",
+    "format": "{}"
+},
+
+  "custom/archicon": {
+    "format": "󰮯",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+
+  "clock": {
+    "timezone": "America/Sao_Paulo",
+    "format": "{:%I:%M %p}",
+    "tooltip-format": "{calendar}",
+    "on-click": "kitty -e calcure"
+},
+
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true,
+    "tooltip-format": "CPU: {usage}%\nNúcleos: {cores}",
+    "on-click": "kitty -e btop"
+  },
+
+  "memory": {
+    "format": "󰍛 {}%",
+    "tooltip": true,
+    "tooltip-format": "RAM: {used} / {total} ({percentage}%)",
+    "on-click": "kitty -e btop"
+  },
+
+  "disk": {
+    "format": " {percentage_free}%",
+    "tooltip": true,
+    "tooltip-format": "Free Space: {free} / {total} ({percentage_free}%)",
+    "on-click": "dolphin"
+  },
+
+"temperature": {
+    "exec": "bash -i -c 'echo $(($(cat /sys/class/hwmon/hwmon0/temp1_input)/1000))°C'",
+    "format": " {output}",
+    "interval": 5,
+    "on-click": "kitty -e btop"
+},
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": " 󱙝 ",
+      "active": " 󰊠 ",
+      "empty": " 󱙝 "
+    },
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "disable-scroll": true,
+    "all-outputs": true,
+    "show-special": true
+  },
+
+"custom/yay": {
+    "format": "{} ", 
+    "interval": 3600,  // every hour
+    "exec": "yay -Qum | wc -l",  // Count number of updates (AUR or system)
+    "exec-if": "exit 0",
+    "on-click": "kitty -e 'yay'; pkill -SIGRTMIN+8 waybar",
+    "signal": 8
+},
+
+"pulseaudio": {
+    "format": "<span color='#94e2d5'>{icon}</span>{volume}%",
+    "format-muted": "<span color='#f38ba8'>󰖁 </span>0%",
+    "format-icons": {
+      "headphone": "<span color='##b4befe'> </span>",
+      "hands-free": "<span color='#b4befe'> </span>",
+      "headset": "<span color='#b4befe'> </span>",
+      "default": [
+        "<span color='#9399b2'> </span>",
+        "<span color='#cdd6f4'> </span>",
+        "<span color='#cdd6f4'>  </span>"
+      ]
+    },
+    "on-click-right": "kitty -e wiremix",
+    "on-click": "pactl set-sink-mute 0 toggle",
+    "tooltip": true,
+    "tooltip-format": "󰄨:{volume}%"
+  },
+
+    "network": {
+    "format-wifi": "<span color='#99d1db'> 󰤨 </span>{essid} ",
+    "format-ethernet": "<span color='#a6d189'>  </span>Wired",
+    "tooltip-format": "<span color='#f4b8e4'> 󰅧 </span>{bandwidthUpBytes} <span color='#94e2d5'> 󰅢 </span>{bandwidthDownBytes}",
+    "format-linked": "<span color='#ef9f76'> 󱘖 </span>{ifname} (No IP) ",
+    "format-disconnected": "<span color='#e78284'>  </span>Disconnected ",
+    "format-alt": "<span color='#99d1db'> 󰤨 </span>{signalStrength}% ",
+    "interval": 1,
+    "on-click-right": "kitty -e gazelle",
+  },
+
+"mpris": {
+ 	"format": "  󰎇 {status_icon} {dynamic}  ",
+        "interval": 1,
+        "dynamic-len": 40,
+	"status-icons": {
+		"playing": " ▶ ",
+		"paused": " ⏸ ",
+		"stopped": "  "
+	},
+	"dynamic-order": ["title", "artist"],
+	"ignored-players": [""]
+    },
+
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span color='#a6d189'> {icon} </span>{capacity}% ",
+    "format-charging": " 󱐋{capacity}%",
+	  "interval": 1,
+    "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
+    "tooltip": true
+  },
+
+  "custom/logout": {
+    "format": "󰣇",
+    "on-click": "wlogout",
+    "on-click-right": "hyprlock",
+    "tooltip-format": "Left: Power menu\nRight: Lock screen"
+  }
+},
+
+
+

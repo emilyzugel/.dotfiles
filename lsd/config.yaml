@@ -1,0 +1,30 @@
+# ~/.config/lsd/config.yaml
+classic: false
+
+blocks:
+  - permission
+  - user
+  - group
+  - size
+  - date
+  - name
+
+color:
+  when: always
+  theme: custom
+
+# 🕓 Data e hora no formato brasileiro
+date: "+%d/%m/%y %H:%M"
+
+icons:
+  when: auto
+  theme: fancy
+  separator: " "
+
+layout: grid
+size: default
+sorting:
+  column: name
+  reverse: false
+  dir-grouping: none
+
