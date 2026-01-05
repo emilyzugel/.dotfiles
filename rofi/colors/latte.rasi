@@ -1,0 +1,13 @@
+/**
+* Catppuccin - Latte Theme
+**/
+
+* {
+    background:     #dce0e8e6;
+    background-alt: #f4b8e4e6;
+    foreground:     #D9E0EEFF;
+    selected:       #B4BEFEFF;
+    active:         #a6d189e6;
+    urgent:         #e78284e6;
+}
+

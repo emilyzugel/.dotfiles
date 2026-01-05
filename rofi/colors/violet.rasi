@@ -1,0 +1,13 @@
+/*
+ * VIOLET THEME
+ */
+
+* {
+    font:                        "JetBrains Mono Nerd Font 10";
+    background:                  #11092D;
+    background-alt:              #281657;
+    foreground:                  #FFFFFF;
+    selected:                    #281657;
+    active:                      #6E77FF;
+    urgent:                      #8E3596;
+}

@@ -1,0 +1,13 @@
+/**
+ALL BLACK - THEME
+**/
+
+* {
+    font:                        "JetBrains Mono Nerd Font 10";
+    background:                  #000000E6;
+    background-alt:              #101010E6;
+    foreground:                  #FFFFFFE6;
+    selected:                    #252525E6;
+    active:                      #101010E6;
+    urgent:                      #707070E6;
+}

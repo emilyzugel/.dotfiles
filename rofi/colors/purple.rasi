@@ -1,0 +1,13 @@
+/**
+ * PURPLE - THEME
+**/
+
+* {
+    font:                        "JetBrains Mono Nerd Font 11";
+    background:                  #201a41e6;
+    background-alt:              #392684ff;
+    foreground:                  #d9e0eee6;
+    selected:                    #b4befee6;
+    active:                      #abe9b3ff;
+    urgent:                      #f28fadff;
+}

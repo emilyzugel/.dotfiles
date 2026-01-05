@@ -1,0 +1,13 @@
+/**
+ * SOLARIZED - GREEN THEME
+**/
+
+* {
+    font:              "JetBrains Mono Nerd Font 10";
+    background:        #002B36e6;
+    background-alt:    #193642FF;
+    foreground:        #EEE8D5FF;
+    selected:          #236f79FF;
+    active:            #859900FF;
+    urgent:            #DC322FFF;
+}

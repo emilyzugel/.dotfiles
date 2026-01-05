@@ -1,0 +1,13 @@
+/**
+ * COFFEE - THEME
+**/
+
+* {
+    font:                        "JetBrains Mono Nerd Font 10";
+    background:                  #2D1B14E6;
+    background-alt:              #462D23E6;
+    foreground:                  #FFFFFFE6;
+    selected:                    #7B6C5BE6;
+    active:                      #7B6C5BE6;
+    urgent:                      #934A1CE6;
+}
