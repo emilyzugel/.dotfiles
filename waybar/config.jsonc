@@ -51,7 +51,7 @@
     "format": " {percentage_free}%",
     "tooltip": true,
     "tooltip-format": "Free Space: {free} / {total} ({percentage_free}%)",
-    "on-click": "dolphin"
+    "on-click": "kitty -e pacseek"
   },
 
 "temperature": {

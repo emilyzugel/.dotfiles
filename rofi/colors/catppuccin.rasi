@@ -5,7 +5,7 @@ Catppuccin - Mocha
 * {
     font:              "JetBrains Mono Nerd Font 10";
     background:        #1E1D2FE6;
-    background-alt:    #282839E6;
+    background-alt:    #282839FF;
     foreground:        #D9E0EEFF;
     selected:          #B4BEFEE6;
     active:            #ABE9B3E6;

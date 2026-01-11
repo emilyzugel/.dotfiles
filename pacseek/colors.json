@@ -1,0 +1,16 @@
+{
+  "Transparent": false,
+  "Accent": "89b4fa",                  // Blue
+  "Title": "f5c2e7",                   // Pink
+  "SearchBar": "74c7ec",               // Sapphire
+  "PackagelistSourceRepository": "a6e3a1", // Green
+  "PackagelistSourceAUR": "fab387",    // Peach
+  "PackagelistHeader": "f9e2af",       // Yellow
+  "SettingsFieldBackground": "585b70", // Surface0
+  "SettingsFieldText": "cdd6f4",       // Text
+  "SettingsFieldLabel": "f2cdcd",      // Flamingo
+  "SettingsDropdownNotSelected": "6c7086", // Surface1
+  "StylePKGBUILD": "catppuccin-mocha",
+  "Comments": "Examples for StylePKGBUILD can be found here: https://xyproto.github.io/splash/docs/all.html"
+}
+

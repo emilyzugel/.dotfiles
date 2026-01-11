@@ -20,6 +20,10 @@ alias cd.dot='cd ~/.dotfiles/'
 alias bitcoin='~/.config/waybar/scripts/bitcoin_price.sh'
 alias cdpj='cd ~/public/projects/'
 alias bcalc="./public/projects/bcalc/bcalc.sh"
+
+# Video recording: wf-recorder
+alias recordsa='wf-recorder -f ~/Videos/wf-recorder_$(date +%Y-%m-%d_%H-%M-%S).mp4 --audio=alsa_input.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.analog-stereo-input'
+
 PS1='[\u@\h \W]\$ '
 
 # Add local scripts locais to PATH
