@@ -30,7 +30,7 @@
     "timezone": "America/Sao_Paulo",
     "format": "{:%I:%M %p}",
     "tooltip-format": "{calendar}",
-    "on-click": "kitty -e calcure"
+    "on-click": "kitty -e calcurse"
 },
 
   "cpu": {
@@ -79,9 +79,9 @@
 "custom/yay": {
     "format": "{} ", 
     "interval": 3600,  // every hour
-    "exec": "yay -Qum | wc -l",  // Count number of updates (AUR or system)
+    "exec": "paru -Qum | wc -l",  // Count number of updates (AUR or system)
     "exec-if": "exit 0",
-    "on-click": "kitty -e 'yay'; pkill -SIGRTMIN+8 waybar",
+    "on-click": "kitty -e 'paru'; pkill -SIGRTMIN+8 waybar",
     "signal": 8
 },
 
