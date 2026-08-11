@@ -1,0 +1,183 @@
+/**
+ * App Launcher
+ * Blackout Theme
+ */
+
+* {
+    font: "JetBrains Mono 11";
+    bg: rgba(0, 0, 0, 0.7);
+    bg-alt: rgba(17, 17, 17, 0.7);
+    fg: rgba(255, 255, 255);
+    fg-alt: #bdbdbd;
+    selected:  rgba(255, 255, 255, 0.5);
+    selected-fg: #000000;
+    active: #333333;
+    urgent: #555555;
+}
+
+/***** Configuration *****/
+
+configuration {
+    modi: "drun,filebrowser,window";
+    show-icons: false;
+    display-drun: "APPS";
+    display-filebrowser: "FILES";
+    display-window: "WIN";
+    drun-display-format: "{name}";
+    window-format: "{w} · {c} · {t}";
+}
+
+/***** Window *****/
+
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 800px;
+    border-radius: 15px;
+    background-color: @bg;
+}
+
+/***** Main Layout *****/
+
+mainbox {
+    orientation: horizontal;
+    spacing: 0px;
+    background-color: transparent;
+    children: [
+        "imagebox",
+        "listbox"
+    ];
+}
+
+/***** Left Side *****/
+
+imagebox {
+    padding: 20px;
+    background-color: transparent;
+    background-image: url("~/walls/metal_bands.jpg", height);
+    orientation: vertical;
+    children: [
+        "inputbar",
+        "dummy",
+        "mode-switcher"
+    ];
+}
+
+dummy {
+    background-color: transparent;
+}
+
+/***** Right Side *****/
+
+listbox {
+    spacing: 20px;
+    padding: 20px;
+    background-color: transparent;
+    orientation: vertical;
+    children: [
+        "message",
+        "listview"
+    ];
+}
+
+/***** Search *****/
+
+inputbar {
+    spacing: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: @bg-alt;
+    text-color: @fg;
+    children: [
+        "textbox-prompt-colon",
+        "entry"
+    ];
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: " ";
+    background-color: transparent;
+    text-color: @fg;
+}
+
+entry {
+    placeholder: "Search";
+    background-color: transparent;
+    text-color: @fg;
+    placeholder-color: @fg-alt;
+}
+
+/***** Buttons *****/
+
+mode-switcher {
+    spacing: 20px;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+button {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+
+button selected {
+    background-color: @selected;
+    text-color: @selected-fg;
+}
+
+/***** Apps List *****/
+
+listview {
+    columns: 1;
+    lines: 8;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    spacing: 10px;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element {
+    padding: 8px;
+    border-radius: 10px;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg-alt;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @selected-fg;
+}
+
+element-icon {
+    size: 32px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+/***** Message *****/
+
+message {
+    background-color: transparent;
+}
+
+textbox {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: @bg-alt;
+    text-color: @fg;
+}

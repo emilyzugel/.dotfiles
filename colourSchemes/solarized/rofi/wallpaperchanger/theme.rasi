@@ -1,0 +1,75 @@
+configuration {
+    show-icons: true;
+}
+
+* {
+    bg:          rgba(0, 43, 54, 0.70);
+    bg-alt:      rgba(7, 54, 66, 0.70);
+    fg:          rgba(131, 148, 150, 1);
+    fg-alt:      #657b83;
+    selected:    rgba(147, 161, 161, 0.50);
+    selected-fg: #eee8d5;
+    active:      #586e75;
+    urgent:      #cb4b16;
+
+    border-radius: 18px;
+}
+
+window {
+    transparency: "real";
+    width: 1500px;
+    background-color: @bg;
+    border: 0;
+    border-radius: 22px;
+    padding: 28px;
+}
+
+mainbox {
+    spacing: 22px;
+    background-color: transparent;
+}
+
+
+listview {
+    columns: 5;
+    lines: 1;
+    cycle: true;
+    scrollbar: false;
+    spacing: 18px;
+    layout: vertical;
+    background-color: transparent;
+}
+
+element {
+    orientation: vertical;
+    padding: 14px;
+    border-radius: 18px;
+    background-color: transparent;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @fg;
+}
+
+element-icon {
+    size: 230px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    horizontal-align: 0.5;
+    margin: 10px 0 0 0;
+    text-color: inherit;
+    text-color: @fg;
+}
+
+scrollbar {
+    enabled: false;
+}

@@ -1,0 +1,126 @@
+* {
+  font-family: "JetBrains Mono Nerd Font";
+  border: none;
+  border-radius: 6pt;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+window#waybar {
+  background-color: transparent;
+  border-bottom: none;
+  font-size: 10pt;
+  margin: 0px;
+  padding: 0px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background: transparent;
+  margin: 5px 10px 0px 10px;
+  padding: 2px 0px 2px 0px;
+}
+
+.modules-left {
+  padding: 0;
+}
+
+.modules-center {
+  padding: 0 10px;
+}
+
+#workspaces {
+  border: 0px;
+  font-weight: bold;
+  font-style: normal;
+  margin-right: 15px;
+}
+
+#workspaces button {
+  color: #000000;
+}
+
+#workspaces button:hover {
+  background: transparent;
+  color: #000000;
+  box-shadow: none;
+}
+
+#mpris,
+#custom-archicon,
+#workspaces,
+#cpu,
+#memory,
+#disk,
+#custom-yay,
+#group-audio,
+#pulseaudio,
+#network#up#down,
+#network,
+#custom-logout,
+#custom-crypto,
+#battery,
+.modules-center {
+  background: #ffffff;
+  color: #000000;
+  margin-right: 5px;
+  padding: 2px 5px;
+}
+
+#custom-archicon,
+#cpu,
+#memory,
+#disk,
+#mpris,
+#battery,
+#custom-logout,
+#clock,
+#pulseaudio,
+#network,
+#custom-yay {
+  color: #000000;
+}
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+  border-radius: 16px;
+  background-color: #ffffff;
+  padding: 50px;
+  margin: 0px;
+}
+
+tooltip label {
+  color: #000000;
+  padding: 10px;
+}
+
+/* -----------------------------------------------------
+ * Look And Feel
+ * ----------------------------------------------------- */
+
+#clock,
+#disk,
+#memory,
+#cpu,
+#custom-archicon,
+#custom-yay,
+#custom-logout,
+#pulseaudio,
+#network {
+  padding-left: 8pt;
+  padding-right: 8pt;
+}
+
+#clock {
+  font-weight: bold;
+}
+
+#pulseaudio-slider {
+  background-color: #000000;
+}

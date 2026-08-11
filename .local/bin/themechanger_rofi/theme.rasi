@@ -1,0 +1,78 @@
+configuration {
+    show-icons: false;
+}
+
+* {
+    font: "JetBrains Mono 11";
+    bg: rgba(20, 20, 25, 0.20);
+    bg-alt: rgba(30, 30, 35, 0.30);
+
+    fg: rgba(255, 255, 255, 0.95);
+    fg-alt: rgba(190, 190, 200, 0.75);
+
+    selected: rgba(255, 255, 255, 0.18);
+    selected-fg: #ffffff;
+
+    active: rgba(255, 255, 255, 0.12);
+    urgent: rgba(255, 80, 80, 0.25);
+    border-radius: 18px;
+}
+
+window {
+    transparency: "real";
+    width: 500px;
+    background-color: @bg;
+    border: 0;
+    border-radius: 22px;
+    padding: 10px;
+}
+
+mainbox {
+    spacing: 10px;
+    background-color: transparent;
+        children: [ listview ];
+}
+
+
+listview {
+    columns: 5;
+    lines: 1;
+    cycle: true;
+    scrollbar: false;
+    spacing: 18px;
+    layout: vertical;
+    background-color: transparent;
+    width: 50px;
+}
+
+element {
+    border-radius: 18px;
+    background-color: transparent;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @fg;
+}
+
+element-icon {
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    horizontal-align: 0.5;
+    margin: 10px;
+    text-color: inherit;
+    text-color: @fg;
+}
+
+scrollbar {
+    enabled: false;
+}
+

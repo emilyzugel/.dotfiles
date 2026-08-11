@@ -1,0 +1,228 @@
+/**
+ * App Launcher
+ *
+ * Solarized Dark Theme
+ */
+
+* {
+    font: "JetBrains Mono 11";
+
+    /* Solarized Dark */
+    bg: rgba(0, 43, 54, 0.94);
+    bg-alt: rgba(7, 54, 66, 0.94);
+
+    /* Neutral Solarized foregrounds */
+    fg: #839496;
+    fg-alt: #657b83;
+
+    /* Soft selection */
+    selected: rgba(147, 161, 161, 0.35);
+    selected-fg: #eee8d5;
+
+    active: #586e75;
+    urgent: #cb4b16;
+}
+
+
+/***** Configuration *****/
+
+configuration {
+    modi: "drun,filebrowser,window";
+    show-icons: false;
+
+    display-drun: "APPS";
+    display-filebrowser: "FILES";
+    display-window: "WIN";
+
+    drun-display-format: "{name}";
+    window-format: "{w} · {c} · {t}";
+}
+
+
+/***** Window *****/
+
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    fullscreen: false;
+
+    width: 800px;
+    border-radius: 15px;
+
+    background-color: @bg;
+}
+
+
+/***** Main Layout *****/
+
+mainbox {
+    orientation: horizontal;
+    spacing: 0px;
+
+    background-color: transparent;
+
+    children: [
+        "imagebox",
+        "listbox"
+    ];
+}
+
+
+/***** Left Side *****/
+
+imagebox {
+    padding: 20px;
+
+    background-color: transparent;
+    background-image: url("~/walls/japanese-skull.jpg", height);
+
+    orientation: vertical;
+
+    children: [
+        "inputbar",
+        "dummy",
+        "mode-switcher"
+    ];
+}
+
+dummy {
+    background-color: transparent;
+}
+
+
+/***** Right Side *****/
+
+listbox {
+    spacing: 20px;
+    padding: 20px;
+
+    background-color: transparent;
+    orientation: vertical;
+
+    children: [
+        "message",
+        "listview"
+    ];
+}
+
+
+/***** Search *****/
+
+inputbar {
+    spacing: 10px;
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background-color: @bg-alt;
+    text-color: @fg;
+
+    children: [
+        "textbox-prompt-colon",
+        "entry"
+    ];
+}
+
+textbox-prompt-colon {
+    expand: false;
+
+    str: " ";
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+entry {
+    placeholder: "Search";
+
+    background-color: transparent;
+    text-color: @fg;
+
+    placeholder-color: @fg-alt;
+}
+
+
+/***** Buttons *****/
+
+mode-switcher {
+    spacing: 20px;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+button {
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+
+button selected {
+    background-color: @selected;
+    text-color: @selected-fg;
+}
+
+
+/***** Apps List *****/
+
+listview {
+    columns: 1;
+    lines: 8;
+
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+
+    spacing: 10px;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element {
+    padding: 8px;
+
+    border-radius: 10px;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg-alt;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @selected-fg;
+}
+
+element-icon {
+    size: 32px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+
+/***** Message *****/
+
+message {
+    background-color: transparent;
+}
+
+textbox {
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background-color: @bg-alt;
+    text-color: @fg;
+}

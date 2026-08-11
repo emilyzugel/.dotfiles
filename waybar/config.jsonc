@@ -72,8 +72,8 @@
       "*": 5
     },
     "disable-scroll": true,
-    "all-outputs": true,
-    "show-special": true
+    "all-outputs": false,
+    "show-special": false
   },
 
 "custom/yay": {
@@ -105,14 +105,14 @@
   },
 
     "network": {
-    "format-wifi": "<span color='#99d1db'> 󰤨 </span>{essid} ",
+    "format-wifi": "<span color='#99d1db'> 󰤨 </span> {essid} ",
     "format-ethernet": "<span color='#a6d189'>  </span>Wired",
     "tooltip-format": "<span color='#f4b8e4'> 󰅧 </span>{bandwidthUpBytes} <span color='#94e2d5'> 󰅢 </span>{bandwidthDownBytes}",
     "format-linked": "<span color='#ef9f76'> 󱘖 </span>{ifname} (No IP) ",
     "format-disconnected": "<span color='#e78284'>  </span>Disconnected ",
     "format-alt": "<span color='#99d1db'> 󰤨 </span>{signalStrength}% ",
     "interval": 1,
-    "on-click-right": "kitty -e gazelle",
+    "on-click-right": "kitty -e gazelle"
   },
 
 "mpris": {
@@ -143,7 +143,7 @@
 
   "custom/logout": {
     "format": "󰣇",
-    "on-click": "$HOME/.config/rofi/powermenu/powermenu.sh",
+    "on-click": "$HOME/.dotfiles/rofi/powermenu/powermenu.sh",
     "on-click-right": "hyprlock",
     "tooltip-format": "Left: Power menu\nRight: Lock screen"
   }

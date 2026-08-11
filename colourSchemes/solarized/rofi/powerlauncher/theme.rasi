@@ -1,0 +1,104 @@
+/**
+ * Power Launcher
+ * Blackout Theme
+ */
+
+/***** Global *****/
+* {
+    font: "JetBrains Mono 9";
+
+    bg:          rgba(0, 43, 54, 0.75);
+    bgalt:       rgba(7, 54, 66, 0.70);
+    fg:          #839496;
+    fgalt:       #657b83;
+    sel:         #93a1a1;
+    selfg:       #eee8d5;
+    bordercolor: #586e75;
+}
+
+configuration {
+    show-icons: false;
+}
+
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: @bg;
+    border: 1px;
+    border-color: @bordercolor;
+}
+
+mainbox {
+    spacing: 0px;
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    children: [ "listview", "message" ];
+}
+
+/***** List *****/
+listview {
+    columns: 3;
+    lines: 1;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: 30px;
+    margin: 30px;
+    background-color: transparent;
+    cursor: default;
+}
+
+/***** Buttons *****/
+element {
+    // padding: 15px 20px 30px 40px;
+    padding: 20px 20px 30px 20px;
+    border-radius: 15px;
+    background-color: @bgalt;
+    text-color: @fg;
+    cursor: pointer;
+}
+
+element normal.normal {
+    background-color: @bgalt;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @sel;
+    text-color: @selfg;
+}
+
+/***** Text *****/
+element-text {
+    font: "feather bold 32";
+    background-color: transparent;
+    text-color: inherit;
+    cursor: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+message {
+    enabled: true;
+    margin: 0px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: @bgalt;
+    text-color: @fgalt;
+}
+
+textbox {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}

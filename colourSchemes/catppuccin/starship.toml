@@ -51,3 +51,4 @@ format = '[[ $symbol ($version) ](fg:#769ff0 bg:#394260)]($style)'
 symbol = ""
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#394260)]($style)'
+

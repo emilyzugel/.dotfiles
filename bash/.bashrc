@@ -19,12 +19,12 @@ alias nv='nvim'
 alias cddot='cd ~/.config/'
 alias cd.dot='cd ~/.dotfiles/'
 alias bitcoin='~/.config/waybar/scripts/bitcoin_price.sh'
-alias cdpj='cd ~/Projects/'
+alias cdpj='cd ~/public/projects/'
 alias bcalc='./public/projects/bcalc/bcalc.sh'
 alias cache='sudo pacman -Sc && paru -Sc'
 # Video recording: wf-recorder
 alias recordsa='wf-recorder -f ~/Videos/wf-recorder_$(date +%Y-%m-%d_%H-%M-%S).mp4 --audio=alsa_input.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.analog-stereo-input'
-alias sshphone='~/.config/scripts/ssh_phone.sh'
+alias hyprconf='nvim ~/.config/hypr/hyprland.conf'
 
 PS1='[\u@\h \W]\$ '
 
